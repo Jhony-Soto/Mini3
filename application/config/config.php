@@ -43,19 +43,32 @@ if (ENVIRONMENT == 'development' || ENVIRONMENT == 'dev') {
  * then replace this line with full URL (and sub-folder) and a trailing slash.
  */
 
+
 define('URL_PUBLIC_FOLDER', 'public');
 define('URL_PROTOCOL', '//');
 define('URL_DOMAIN', $_SERVER['HTTP_HOST']);
 define('URL_SUB_FOLDER', str_replace(URL_PUBLIC_FOLDER, '', dirname($_SERVER['SCRIPT_NAME'])));
 define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER);
 
+if($_SERVER['DOCUMENT_ROOT']=='C:/xampp/htdocs/MINI/mini3'  || $_SERVER['SERVER_NAME']=='mini3.local'){
+    define('DB_HOST', '127.0.0.1');
+}else{
+    define('DB_HOST', 'servidor_produccion');
+}
+
+if($_SERVER['DOCUMENT_ROOT']=='C:/xampp/htdocs/MINI/mini3'  || $_SERVER['SERVER_NAME']=='mini3.local'){
+    define('ROOTA', 'C:/xampp/htdocs/MINI/mini3/public');
+}else{
+    define('ROOTA', 'NOMBRE SERVIDOR PRODUCCION');
+}
+
 /**
  * Configuration for: Database
  * This is the place where you define your database credentials, database type etc.
  */
 define('DB_TYPE', 'mysql');
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'mini');
+define('DB_NAME', 'catalogo_licorera');
 define('DB_USER', 'root');
-define('DB_PASS', '12345678');
+define('DB_PASS', '');
 define('DB_CHARSET', 'utf8mb4');
+define('APP_NAME','Licorera 4 Esquinas');

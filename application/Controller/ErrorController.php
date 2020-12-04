@@ -20,8 +20,9 @@ class ErrorController
     public function index()
     {
         // load views
+
+        $titulo='ERROR';
         require APP . 'view/_templates/header.php';
         require APP . 'view/error/index.php';
-        require APP . 'view/_templates/footer.php';
     }
 }

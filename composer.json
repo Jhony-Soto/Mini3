@@ -15,7 +15,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "robmorgan/phinx": "dev-master"
+        "robmorgan/phinx": "dev-master",
+        "twbs/bootstrap": "4.5.0"
     },
     "autoload":
     {

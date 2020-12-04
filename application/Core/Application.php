@@ -25,7 +25,7 @@ class Application
         // check for controller: no controller given ? then load start-page
         if (!$this->url_controller) {
 
-            $page = new \Mini\Controller\HomeController();
+            $page = new \Mini\Controller\CatalogoController();
             $page->index();
 
         } elseif (file_exists(APP . 'Controller/' . ucfirst($this->url_controller) . 'Controller.php')) {
