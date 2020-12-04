@@ -52,14 +52,20 @@ define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER);
 
 if($_SERVER['DOCUMENT_ROOT']=='C:/xampp/htdocs/MINI/mini3'  || $_SERVER['SERVER_NAME']=='mini3.local'){
     define('DB_HOST', '127.0.0.1');
+    define('DB_NAME', 'catalogo_licorera');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
 }else{
-    define('DB_HOST', 'servidor_produccion');
+    define('DB_HOST', 'sql303.epizy.com');
+    define('DB_NAME', 'epiz_25610788_catalogo_licorera');
+    define('DB_USER', 'epiz_25610788');
+    define('DB_PASS', 'vyi3LnOAhOLL0');
 }
 
 if($_SERVER['DOCUMENT_ROOT']=='C:/xampp/htdocs/MINI/mini3'  || $_SERVER['SERVER_NAME']=='mini3.local'){
     define('ROOTA', 'C:/xampp/htdocs/MINI/mini3/public');
 }else{
-    define('ROOTA', 'NOMBRE SERVIDOR PRODUCCION');
+    define('ROOTA', 'http://tulicor.epizy.com/');
 }
 
 /**
@@ -67,8 +73,5 @@ if($_SERVER['DOCUMENT_ROOT']=='C:/xampp/htdocs/MINI/mini3'  || $_SERVER['SERVER_
  * This is the place where you define your database credentials, database type etc.
  */
 define('DB_TYPE', 'mysql');
-define('DB_NAME', 'catalogo_licorera');
-define('DB_USER', 'root');
-define('DB_PASS', '');
 define('DB_CHARSET', 'utf8mb4');
 define('APP_NAME','Licorera 4 Esquinas');
